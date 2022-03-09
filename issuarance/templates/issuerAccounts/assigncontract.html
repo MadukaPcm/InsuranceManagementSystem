@@ -1,0 +1,21 @@
+{% extends 'issuerAccounts/baseissuer.html' %}
+{% load static %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <form method="post" style="border: 4px; background-color:rgb(139, 145, 139); padding:10px; border-radius: 5px;">
+                {% csrf_token %}
+                <legend class="border-bottom mb-4"><h3 style="color: blue;"><b>Assign || Publish a Contract:</b></h3></legend>
+                {{ form | crispy }}
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="{% url 'contractlist_url' %}" class="btn btn-warning pull-right">Back</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

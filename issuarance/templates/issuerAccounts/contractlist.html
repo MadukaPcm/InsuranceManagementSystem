@@ -1,0 +1,43 @@
+{% extends 'issuerAccounts/baseissuer.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="box align-right" style = "background-color: rgb(247, 239, 246); color:black">
+    <div class="box-header">
+      <h4 class="box-title"><b>A table for created contract:</b></h4>
+      <a class="btn btn-primary pull-right" href="{% url 'assigncontract_url' %}">
+        Create Contract:
+      </a>
+    </div>
+   
+    <!-- /.box-header -->
+    <div class="box-body">
+      <table id="example1" class="table table-bordered table-striped">
+        <thead>
+        <tr>
+          <th>ISSUER</th>
+          <th>CONTRACT</th>
+          <th>CREATED AT</th>
+          <!-- <th>ACTION</th> -->
+        </tr>
+        </thead>
+        <tbody>
+        {% for ct in contract %}
+        <tr>
+          <td>{{ct.user}}</td>
+          <td>{{ct.client}}</td>
+          <td>{{ct.created_at}}</td>
+          <!-- <td>
+            <a class="fa fa-edit btn-sm btn-primary" title="edit" href="#"></a>
+          </td> -->
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <!-- /.box-body -->
+  </div>
+  
+
+{% endblock content %}

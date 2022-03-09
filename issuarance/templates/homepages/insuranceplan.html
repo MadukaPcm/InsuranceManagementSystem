@@ -1,0 +1,46 @@
+{% extends 'homepages/homebase.html' %}
+
+
+{% block content %}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <a href="{% url 'homepage_url' %}"><b>Home</b></a>
+    </div>
+</div>
+<div class="page">
+    <div class="container">
+        <div class="filterable-items">
+            <div class="insurance-item filterable-item shopping-center">
+                <div class="insurance-content">
+                    <div class="insurance-icon"><i class="icon-sofa"></i></div>
+                    <h3 class="insurance-title">Safe Hourse</h3>
+                    <p>Etiam aliquam ante in mattis molestie. Vivamus in laoreet eros. Proin </p>
+                
+                </div>
+            </div>
+        
+
+            <div class="insurance-item filterable-item skyscraper">
+                <div class="insurance-content">
+                    <div class="insurance-icon"><i class="icon-pool"></i></div>
+                    <h3 class="insurance-title">Happy Holiday</h3>
+                    <p>Etiam aliquam ante in mattis molestie. Vivamus in laoreet eros. Proin tempus velit dui </p>
+            
+                </div>
+            </div>
+
+            <div class="insurance-item filterable-item apartment">
+                <div class="insurance-content">
+                    <div class="insurance-icon"><i class="icon-nurse"></i></div>
+                    <h3 class="insurance-title">Medical 24</h3>
+                    <p>Etiam aliquam ante in mattis molestie. Vivamus in s luctus neque.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div> <!-- .page -->
+
+
+{% endblock content %}

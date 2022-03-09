@@ -1,0 +1,31 @@
+{% extends 'issuerAccounts/baseissuer.html' %}
+{% load static %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<form method="post" action="map_url">
+  {% csrf_token %}
+  <div class="input-group mb-3">
+    {{ form | crispy }}
+    <div class="input-group-append">
+      <div class="input-group-text">
+        <span class="fas fa-search" title="search"></span>
+      </div>
+    </div>
+  </div>
+</form>
+      <!-- Main content -->
+<div class="container">
+  <section class="content">
+      <div class="container-fluid">
+        {{ mp|safe }}
+      </div>
+  </section>
+</div>
+
+  
+
+
+  {% endblock content %}

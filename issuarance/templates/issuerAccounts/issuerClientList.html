@@ -1,0 +1,48 @@
+{% extends 'issuerAccounts/baseissuer.html' %}
+{% load static %}
+
+{% block content %}
+{% load static %}
+<div class="box align-right" style = "background-color: rgb(247, 239, 246); color:black">
+  <div class="box-header">
+    <h4 class="box-title"><b>Table For Clients Account:</b></h4>
+    <a class="btn btn-primary pull-right" href="{% url 'issuerRegisterClient_url' %}">
+      Create A Client:
+    </a>
+  </div>
+ 
+  <!-- /.box-header -->
+  <div class="box-body">
+    <table id="example1" class="table table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>FIRST NAME</th>
+        <th>LAST NAME</th>
+        <th>PHONE</th>
+        <th>ADDRESS</th>
+        <th>EMAIL</th>
+        <th>CREATED AT</th>
+        <th>ACTION</th>
+      </tr>
+      </thead>
+      <tbody>
+        {% for datas in datas %}
+        <tr>
+          <td>{{datas.first_name}}</td>
+          <td>{{datas.last_name}}</td>
+          <td>{{datas.phone}}</td>
+          <td> {{datas.address}}</td>
+          <td>{{datas.email}}</td>
+          <td>{{datas.created_date}}</td>
+          <td>
+            <a class="fa fa-edit btn-sm btn-primary" title="edit" href="{% url 'issuerEditClient_url' datas.id %}"></a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <!-- /.box-body -->
+</div>
+
+{% endblock content %}

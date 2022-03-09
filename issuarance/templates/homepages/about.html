@@ -1,0 +1,55 @@
+{% extends 'homepages/homebase.html' %}
+
+
+{% block content %}
+{% load static %}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <a href="{% url 'homepage_url' %}"><b>Home</b></a>
+    </div>
+</div>
+
+<div class="fullwidth-block">
+    <div class="container">
+        <h4 class="section-title">Group02 Team Members.</h4>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="team">
+                    <figure class="team-image"><img src="{% static 'images/dit.jpg' %}" alt=""></figure>
+                    <h2 class="team-name">Jessica Brown</h2>
+                    <small class="team-title">CEO</small>
+                </div> <!-- .team -->
+            </div> <!-- .col-md-3 -->
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="team">
+                    <figure class="team-image"><img src="{% static 'images/coder.jpg' %}" alt=""></figure>
+                    <h2 class="team-name">Jeremy Stuart</h2>
+                    <small class="team-title">Managing Director</small>
+                    <div class="social-links">
+                      
+                    </div>
+                </div> <!-- .team -->
+            </div> <!-- .col-md-3 -->
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="team">
+                    <figure class="team-image"><img src="{% static 'images/bro.jpg' %}" alt=""></figure>
+                    <h2 class="team-name">Sarah Johnson</h2>
+                    <small class="team-title">Public Relation</small>
+                  
+                </div> <!-- .team -->
+            </div> <!-- .col-md-3 -->
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="team">
+                    <figure class="team-image"><img src="{% static 'images/dit.jpg' %}" alt=""></figure>
+                    <h2 class="team-name">Paul ferguson</h2>
+                    <small class="team-title">Consultant</small>
+                
+                </div> <!-- .team -->
+            </div> <!-- .col-md-3 -->
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+</div> <!-- .fullwidth-block -->
+
+{% endblock content %}

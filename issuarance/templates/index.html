@@ -1,0 +1,40 @@
+{% extends 'homepages/homebase.html' %}
+
+
+{% block content %}
+{% load static %}
+
+<div class="hero hero-slider">
+    <ul class="slides">
+        <li data-bg-image="{% static 'images/dit.jpg' %}">
+            <div class="container">
+                <div class="slide-content">
+                    <h2 class="slide-title">Get your <strong>Life Insurance</strong></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href="#" class="button">|</a>
+                </div>
+            </div>
+        </li>
+        <li data-bg-image="{% static 'images/coder.jpg' %}">
+            <div class="container">
+                <div class="slide-content">
+                    <h2 class="slide-title">Get your <strong>Life Insurance</strong></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href="#" class="button">||</a>
+                </div>
+            </div>
+        </li>
+        <li data-bg-image="{% static 'images/bro.jpg' %}" style="height: 100px;">
+            <div class="container">
+                <div class="slide-content">
+                    <h2 class="slide-title">Get your <strong>Life Insurance</strong></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href="#" class="button">|||</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div> <!-- .hero-slider -->
+
+{% endblock content %}
+		
